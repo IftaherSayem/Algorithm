@@ -74,9 +74,9 @@ bool deco(pair <int,int>&a,pair<int,int>&b)
 }
 
 
-ll power(ll x, ll y)
+long long power(long long x, long long y)
 {
-    ll val = 1;
+    long long val = 1;
 
     while (y > 0)
     {

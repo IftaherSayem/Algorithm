@@ -102,4 +102,41 @@ bool chk(int a)
     return true;
 }
 
+int power (int n, int k, int m)
+{
+    int ans = 1;
+    n = (n + m) % m;
+    while (k)
+    {
+       if(k&1) ans=1LL*ans*n%m;
+       n=1LL*n*n%m;
+       k>>=1;
+    }
+    return ans;
+}
+
+
+ll bigmod(ll base,ll power)
+{
+   ll res=1;
+   ll p=base%mod;
+   while(power)
+   {
+      if(power%2)
+      {
+         res=((res%mod)+(p%mod))%mod;
+      }
+      power/=2;
+      p=((p%mod)*(p%mod))%mod;
+   }
+   return res;
+}
+
+
+ll sqrtt(ll a)
+{
+   ll x=sqrt(a)+2;
+   while(x*x>a) x--;
+   return x;
+}
 
